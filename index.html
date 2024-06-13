@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mi Dashboard Solar</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>MONITORIZACIÓN INSTALACIONES ODS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: orange;
+        }
+        h2 {
+            color: green;
+        }
+        #growatt-data {
+            background-color: yellow;
+            padding: 20px;
+            margin: 10px;
+        }
+        #huawei-data {
+            background-color: red;
+            padding: 20px;
+            margin: 10px;
+        }
+        #goodwe-data {
+            background-color: blue;
+            padding: 20px;
+            margin: 10px;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenido a la plataforma de monitorización de ODS Energy</h1>
-    <!-- Aquí irán los datos de las plataformas de monitorización -->
-    <div id="growatt-data"></div>
-    <div id="huawei-data"></div>
-    <div id="goodwe-data"></div>
+    <h1>ODS ENERGY Energías Renovables</h1>
+    <h2>MONITORIZACIÓN INSTALACIONES ODS</h2>
+    <div id="growatt-data">
+        <h3>Datos de Growatt</h3>
+        <!-- Aquí irán los datos de Growatt -->
+    </div>
+    <div id="huawei-data">
+        <h3>Datos de Huawei</h3>
+        <!-- Aquí irán los datos de Huawei -->
+    </div>
+    <div id="goodwe-data">
+        <h3>Datos de Goodwe</h3>
+        <!-- Aquí irán los datos de Goodwe -->
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
