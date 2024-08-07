@@ -121,11 +121,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
         #header {
             display: flex;
             justify-content: space-between;
             padding: 10px;
             background-color: #f4f4f4;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         #info-panel {
@@ -134,6 +143,27 @@
 
         .info-item {
             margin: 5px 0;
+        }
+
+        #monitoring-panel {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        #monitoring-content {
+            text-align: center;
+        }
+
+        #time {
+            position: absolute;
+            top: 10px;
+            left: 10px;
         }
     </style>
 </head>
@@ -152,11 +182,29 @@
         </div>
     </div>
 
+    <div id="monitoring-panel">
+        <div id="monitoring-content">
+            <!-- Aquí puedes agregar más contenido si es necesario -->
+            <p>Contenido de monitorización de plantas fotovoltaicas irá aquí.</p>
+        </div>
+    </div>
+
     <script>
         function updateTime() {
-            const options = { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            const formatter = new Intl.DateTimeFormat([], options);
-            document.getElementById('time').innerText = formatter.format(new Date());
+            const now = new Date();
+            const optionsTime = { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const optionsDate = { timeZone: 'Europe/Madrid', weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' };
+            
+            const timeFormatter = new Intl.DateTimeFormat([], optionsTime);
+            const dateFormatter = new Intl.DateTimeFormat([], optionsDate);
+
+            const timeString = timeFormatter.format(now);
+            const dateString = dateFormatter.format(now);
+
+            document.getElementById('time').innerHTML = `
+                <div>${dateString}</div>
+                <div>${timeString}</div>
+            `;
         }
 
         function updateInfo() {
