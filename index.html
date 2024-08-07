@@ -11,6 +11,10 @@
             left: 10px;
             font-size: 18px;
             font-family: Arial, sans-serif;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -22,9 +26,20 @@
 
     <script>
         function updateTime() {
-            const options = { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            const formatter = new Intl.DateTimeFormat([], options);
-            document.getElementById('time').innerText = formatter.format(new Date());
+            const now = new Date();
+            const optionsTime = { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const optionsDate = { timeZone: 'Europe/Madrid', weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' };
+            
+            const timeFormatter = new Intl.DateTimeFormat([], optionsTime);
+            const dateFormatter = new Intl.DateTimeFormat([], optionsDate);
+
+            const timeString = timeFormatter.format(now);
+            const dateString = dateFormatter.format(now);
+
+            document.getElementById('time').innerHTML = `
+                <div>${dateString}</div>
+                <div>${timeString}</div>
+            `;
         }
 
         setInterval(updateTime, 1000); // Actualiza cada segundo
@@ -32,6 +47,8 @@
     </script>
 </body>
 </html>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
