@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>MONITORIZACIÓN INSTALACIONES ODS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
         body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -17,22 +20,59 @@
             display: flex;
             justify-content: space-between;
             padding: 10px;
-            background-color: #f4f4f4;
+            background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        #time {
-            font-size: 18px;
         }
 
         #company-info {
             text-align: left;
         }
 
+        #time {
+            font-size: 18px;
+        }
+
+        .data-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        #growatt-data {
+            border-left: 5px solid #ffeb3b;
+        }
+
+        #huawei-data {
+            border-left: 5px solid #f44336;
+        }
+
+        #goodwe-data {
+            border-left: 5px solid #2196f3;
+            background-color: #e3f2fd; /* Fondo azul claro */
+            color: #000; /* Texto negro */
+        }
+
+        h1 {
+            color: #ff9800;
+            text-align: center;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        h2 {
+            color: #4caf50;
+            text-align: center;
+            margin: 0;
+            padding: 10px 0;
+        }
+
         #monitoring-panel {
             margin-top: auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #fff;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
@@ -50,11 +90,28 @@
 <body>
     <div id="header">
         <div id="company-info">
-            <h1>Nombre de la Empresa</h1>
+            <h1>ODS ENERGY Energías Renovables</h1>
             <p>Dirección de la Empresa</p>
             <p>Contacto: email@empresa.com</p>
         </div>
         <div id="time"></div>
+    </div>
+
+    <h2>MONITORIZACIÓN INSTALACIONES ODS</h2>
+
+    <div id="growatt-data" class="data-section">
+        <h3>Datos de Growatt</h3>
+        <!-- Aquí irán los datos de Growatt -->
+    </div>
+
+    <div id="huawei-data" class="data-section">
+        <h3>Datos de Huawei</h3>
+        <!-- Aquí irán los datos de Huawei -->
+    </div>
+
+    <div id="goodwe-data" class="data-section">
+        <h3>Datos de Goodwe</h3>
+        <!-- Aquí irán los datos de Goodwe -->
     </div>
 
     <div id="monitoring-panel">
