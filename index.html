@@ -32,6 +32,81 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        #header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+
+        #info-panel {
+            text-align: center;
+        }
+
+        .info-item {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="time"></div>
+        <div id="info-panel">
+            <div class="info-item"><strong>Sumatorio de plantas FV:</strong> <span id="plants-total">0</span></div>
+            <div class="info-item"><strong>Potencia pico instalada:</strong> <span id="peak-power">0 kW</span></div>
+            <div class="info-item"><strong>Energía total producida este mes:</strong> <span id="energy-produced">0 kWh</span></div>
+            <div class="info-item"><strong>Capacidad total en baterías:</strong> <span id="battery-capacity">0 kWh</span></div>
+            <div class="info-item"><strong>Avisos:</strong></div>
+            <div id="alerts">
+                <!-- Avisos se mostrarán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const options = { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const formatter = new Intl.DateTimeFormat([], options);
+            document.getElementById('time').innerText = formatter.format(new Date());
+        }
+
+        function updateInfo() {
+            // Aquí deberías poner la lógica para obtener los datos reales
+            document.getElementById('plants-total').innerText = '10'; // Ejemplo
+            document.getElementById('peak-power').innerText = '1500'; // Ejemplo
+            document.getElementById('energy-produced').innerText = '5000'; // Ejemplo
+            document.getElementById('battery-capacity').innerText = '1000'; // Ejemplo
+
+            // Agregar lógica para los avisos
+            const alerts = [
+                { type: 'Crítica', message: 'Fallo en el inversor 2' },
+                { type: 'Grave', message: 'Batería 3 con bajo nivel' }
+                // Más avisos aquí
+            ];
+
+            const alertsContainer = document.getElementById('alerts');
+            alertsContainer.innerHTML = '';
+            alerts.forEach(alert => {
+                const alertDiv = document.createElement('div');
+                alertDiv.innerHTML = `<strong>${alert.type}:</strong> ${alert.message}`;
+                alertsContainer.appendChild(alertDiv);
+            });
+        }
+
+        setInterval(updateTime, 1000); // Actualiza la hora cada segundo
+        updateTime(); // Inicializa la hora inmediatamente
+
+        updateInfo(); // Inicializa la información del panel
+    </script>
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="es">
