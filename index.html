@@ -74,7 +74,6 @@
             padding: 20px;
             background: url('https://images.pexels.com/photos/547114/pexels-photo-547114.jpeg') no-repeat center center;
             background-size: cover;
-            color: #fff;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
@@ -82,6 +81,10 @@
         #monitoring-content {
             max-width: 800px;
             margin: 0 auto;
+            background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejor legibilidad */
+            padding: 20px;
+            border-radius: 8px;
+            color: #fff; /* Asegura que el texto sea legible sobre el fondo oscuro */
         }
 
         #alerts {
@@ -94,87 +97,4 @@
         <img id="company-logo" src="https://i.postimg.cc/4yJ3YQm3/Logo-ODS-Fondo-Blanco.jpg" alt="Logo de la empresa">
         <div id="company-info">
             <h1>ODS ENERGY Energías Renovables</h1>
-            <p>C/Molí Nou 15-17 Nave 7, 03110 Mutxamel</p>
-            <p>Contacto: info@odsenergy.es +34 633 31 94 96</p>
-        </div>
-        <div id="time"></div>
-    </div>
-
-    <h2>MONITORIZACIÓN INSTALACIONES ODS</h2>
-
-    <div id="growatt-data" class="data-section">
-        <h3>Datos de Growatt</h3>
-        <!-- Aquí irán los datos de Growatt -->
-    </div>
-
-    <div id="huawei-data" class="data-section">
-        <h3>Datos de Huawei</h3>
-        <!-- Aquí irán los datos de Huawei -->
-    </div>
-
-    <div id="goodwe-data" class="data-section">
-        <h3>Datos de Goodwe</h3>
-        <!-- Aquí irán los datos de Goodwe -->
-    </div>
-
-    <div id="monitoring-panel">
-        <div id="monitoring-content">
-            <div class="info-item"><strong>Sumatorio de plantas FV:</strong> <span id="plants-total">0</span></div>
-            <div class="info-item"><strong>Potencia pico instalada:</strong> <span id="peak-power">0 kW</span></div>
-            <div class="info-item"><strong>Energía total producida este mes:</strong> <span id="energy-produced">0 kWh</span></div>
-            <div class="info-item"><strong>Capacidad total en baterías:</strong> <span id="battery-capacity">0 kWh</span></div>
-            <div class="info-item"><strong>Avisos:</strong></div>
-            <div id="alerts">
-                <!-- Avisos se mostrarán aquí -->
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function updateTime() {
-            const now = new Date();
-            const optionsTime = { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            const optionsDate = { timeZone: 'Europe/Madrid', weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' };
-            
-            const timeFormatter = new Intl.DateTimeFormat([], optionsTime);
-            const dateFormatter = new Intl.DateTimeFormat([], optionsDate);
-
-            const timeString = timeFormatter.format(now);
-            const dateString = dateFormatter.format(now);
-
-            document.getElementById('time').innerHTML = `
-                <div>${dateString}</div>
-                <div>${timeString}</div>
-            `;
-        }
-
-        function updateInfo() {
-            // Aquí deberías poner la lógica para obtener los datos reales
-            document.getElementById('plants-total').innerText = '10'; // Ejemplo
-            document.getElementById('peak-power').innerText = '1500'; // Ejemplo
-            document.getElementById('energy-produced').innerText = '5000'; // Ejemplo
-            document.getElementById('battery-capacity').innerText = '1000'; // Ejemplo
-
-            // Agregar lógica para los avisos
-            const alerts = [
-                { type: 'Crítica', message: 'Fallo en el inversor 2' },
-                { type: 'Grave', message: 'Batería 3 con bajo nivel' }
-                // Más avisos aquí
-            ];
-
-            const alertsContainer = document.getElementById('alerts');
-            alertsContainer.innerHTML = '';
-            alerts.forEach(alert => {
-                const alertDiv = document.createElement('div');
-                alertDiv.innerHTML = `<strong>${alert.type}:</strong> ${alert.message}`;
-                alertsContainer.appendChild(alertDiv);
-            });
-        }
-
-        setInterval(updateTime, 1000); // Actualiza la hora cada segundo
-        updateTime(); // Inicializa la hora inmediatamente
-
-        updateInfo(); // Inicializa la información del panel
-    </script>
-</body>
-</html>
+            <p>C/Molí Nou 15-17 Na
