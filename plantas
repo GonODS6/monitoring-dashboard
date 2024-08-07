@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Plantas - ODS ENERGY</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #company-info {
+            text-align: left;
+        }
+
+        h1 {
+            color: #ff9800;
+            text-align: center;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        h2 {
+            color: #4caf50;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #plants-list {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #plants-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #plants-list th, #plants-list td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #plants-list th {
+            background-color: #f2f2f2;
+        }
+
+        #company-info a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        #company-info a:hover {
+            text-decoration: underline;
+        }
+
+        #back-link {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #back-link a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img id="company-logo" src="https://i.postimg.cc/4yJ3YQm3/Logo-ODS-Fondo-Blanco.jpg" alt="Logo de la empresa">
+        <div id="company-info">
+            <h1>ODS ENERGY Energías Renovables</h1>
+            <p>
+                <a href="https://www.google.com/maps?q=C/Molí+Nou+15-17,+Nave+7,+03110+Mutxamel" target="_blank" rel="noopener noreferrer">
+                    C/Molí Nou 15-17 Nave 7, 03110 Mutxamel
+                </a>
+            </p>
+            <p>Contacto: <a href="mailto:info@odsenergy.es">info@odsenergy.es</a> +34 633 31 94 96</p>
+        </div>
+    </div>
+
+    <h2>Listado de Plantas</h2>
+
+    <div id="plants-list">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre de la Planta</th>
+                    <th>Ubicación</th>
+                    <th>Potencia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejemplo de datos, reemplaza con los datos reales -->
+                <tr>
+                    <td>Planta Solar 1</td>
+                    <td>Valencia</td>
+                    <td>500 kW</td>
+                </tr>
+                <tr>
+                    <td>Planta Solar 2</td>
+                    <td>Alicante</td>
+                    <td>750 kW</td>
+                </tr>
+                <tr>
+                    <td>Planta Solar 3</td>
+                    <td>Murcia</td>
+                    <td>1 MW</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="back-link">
+        <a href="index.html">Volver a la Página Principal</a>
+    </div>
+</body>
+</html>
