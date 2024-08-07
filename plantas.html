@@ -19,20 +19,28 @@
         #header {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding: 10px;
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #company-logo {
+            height: 50px;
         }
 
         #company-info {
             text-align: left;
         }
 
-        h1 {
-            color: #ff9800;
-            text-align: center;
+        #company-info h1 {
+            font-size: 20px;
             margin: 0;
-            padding: 10px 0;
+        }
+
+        #company-info p {
+            margin: 5px 0;
+            font-size: 14px;
         }
 
         h2 {
@@ -56,12 +64,17 @@
         }
 
         #plants-list th, #plants-list td {
-            padding: 10px;
+            padding: 15px;
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
 
         #plants-list th {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        #plants-list tr:nth-child(even) {
             background-color: #f2f2f2;
         }
 
@@ -87,6 +100,26 @@
 
         #back-link a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            #header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #company-info {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            #company-info h1 {
+                font-size: 18px;
+            }
+
+            #company-info p {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
