@@ -21,16 +21,12 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        #info-panel {
-            text-align: center;
-        }
-
-        .info-item {
-            margin: 5px 0;
-        }
-
         #time {
             font-size: 18px;
+        }
+
+        #company-info {
+            text-align: left;
         }
 
         #monitoring-panel {
@@ -45,10 +41,19 @@
             max-width: 800px;
             margin: 0 auto;
         }
+
+        #alerts {
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
     <div id="header">
+        <div id="company-info">
+            <h1>Nombre de la Empresa</h1>
+            <p>Dirección de la Empresa</p>
+            <p>Contacto: email@empresa.com</p>
+        </div>
         <div id="time"></div>
     </div>
 
