@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuales de Configuración - ODS ENERGY</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #company-logo {
+            height: 50px;
+        }
+
+        #company-info {
+            text-align: left;
+        }
+
+        #company-info h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        #company-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        h2 {
+            color: #4caf50;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #manuals-list {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #manuals-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #manuals-list li {
+            background-color: #e3f2fd;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #manuals-list a {
+            text-decoration: none;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        #manuals-list a:hover {
+            text-decoration: underline;
+        }
+
+        #company-info a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        #company-info a:hover {
+            text-decoration: underline;
+        }
+
+        #back-link {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #back-link a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #back-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            #header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #company-info {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            #company-info h1 {
+                font-size: 18px;
+            }
+
+            #company-info p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img id="company-logo" src="https://i.postimg.cc/4yJ3YQm3/Logo-ODS-Fondo-Blanco.jpg" alt="Logo de la empresa">
+        <div id="company-info">
+            <h1>ODS ENERGY Energías Renovables</h1>
+            <p>
+                <a href="https://www.google.com/maps?q=C/Molí+Nou+15-17,+Nave+7,+03110+Mutxamel" target="_blank" rel="noopener noreferrer">
+                    C/Molí Nou 15-17 Nave 7, 03110 Mutxamel
+                </a>
+            </p>
+            <p>Contacto: <a href="mailto:info@odsenergy.es">info@odsenergy.es</a> +34 633 31 94 96</p>
+        </div>
+    </div>
+
+    <h2>Manuales de Configuración</h2>
+
+    <div id="manuals-list">
+        <ul>
+            <li>
+                <a href="manuales/smartlogger.pdf" target="_blank">Manual de Configuración de Smartlogger</a>
+            </li>
+            <li>
+                <a href="manuales/inversor1.pdf" target="_blank">Manual de Configuración de Inversor 1</a>
+            </li>
+            <li>
+                <a href="manuales/inversor2.pdf" target="_blank">Manual de Configuración de Inversor 2</a>
+            </li>
+            <!-- Añade más manuales aquí -->
+        </ul>
+    </div>
+
+    <div id="back-link">
+        <a href="index.html">Volver a la Página Principal</a>
+    </div>
+</body>
+</html>
 
